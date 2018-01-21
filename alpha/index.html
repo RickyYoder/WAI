@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,user-scalable=no"/>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="main.css"/>
+  <title>Notepad</title>
+</head>
+<body>
+  <a href="#" id="downloadLink"></a>
+  
+  <div class="modal" id="fileExplorer">
+    <div class="modal-content">
+      <i class="material-icons close">close</i>
+      <h4>My Files</h4>
+      <table class="responsive striped bordered">
+        <thead>
+          <tr>
+            <th>Filename</th>
+            <th>Options</th>
+          </tr>
+        </thead>
+        <tbody>
+          <td>Example.txt</td>
+          <td><button class="btn black white-text waves waves-effect waves-light">Open</button></td>
+          <td><i class="small material-icons">delete</i></td>
+          <td><i class="small material-icons">file_download</i></td>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" data-activates="mobileNav" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="hide-on-small-only">
+          <li><a class="fileExplorerTrigger" href="#"><i class="large material-icons black-text">folder</i></a></li>
+          <li><a href="#"><i class="saveTrigger large material-icons black-text">save</i></a></li>
+          <li><a class="downloadTrigger" href="#"><i class="large material-icons black-text">file_download</i></a></li>
+        </ul>
+        
+        <ul class="side-nav" id="mobileNav">
+          <li><a class="fileExplorerTrigger" href="#"><i class="large material-icons black-text">folder</i>View My Files</a></li>
+          <li><a href="#"><i class="saveTrigger large material-icons black-text">save</i>Save Current File</a></li>
+          <li><a id="downloadTrigger" href="#"><i class="large material-icons black-text">file_download</i>Download Open File</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <textarea id="editor" class="browser-default" placeholder="Write your notes here..."></textarea>
+
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js" async></script>
+  <script src="ace/ace.js"></script>
+  <script src="main.js" async></script>
+</body>
+</html>
