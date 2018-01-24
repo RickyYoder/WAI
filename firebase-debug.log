@@ -1,0 +1,32 @@
+[debug] [2018-01-24T22:48:24.801Z] ----------------------------------------------------------------------
+[debug] [2018-01-24T22:48:24.801Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Rick\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve
+[debug] [2018-01-24T22:48:24.801Z] CLI Version:   3.17.3
+[debug] [2018-01-24T22:48:24.801Z] Platform:      win32
+[debug] [2018-01-24T22:48:24.801Z] Node Version:  v6.11.4
+[debug] [2018-01-24T22:48:24.801Z] Time:          Wed Jan 24 2018 17:48:24 GMT-0500 (Eastern Standard Time)
+[debug] [2018-01-24T22:48:24.801Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-01-24T22:48:24.816Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-01-24T22:48:24.816Z] > authorizing via signed-in user
+[debug] [2018-01-24T22:48:24.816Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/notepad-ebc62  
+  
+ Wed Jan 24 2018 17:48:24 GMT-0500 (Eastern Standard Time)
+[debug] [2018-01-24T22:48:25.367Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-24T22:48:25.368Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/notepad-ebc62/tokens  
+  
+ Wed Jan 24 2018 17:48:25 GMT-0500 (Eastern Standard Time)
+[debug] [2018-01-24T22:48:25.690Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Rick\Desktop\WAI\WAI'...
+[info] 
+[debug] [2018-01-24T22:48:25.706Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/notepad-ebc62  
+  
+ Wed Jan 24 2018 17:48:25 GMT-0500 (Eastern Standard Time)
+[debug] [2018-01-24T22:48:26.016Z] <<< HTTP RESPONSE 200
+[debug] [2018-01-24T22:48:26.016Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/647583058950/clients/_:getWebAppConfig  
+  
+ Wed Jan 24 2018 17:48:26 GMT-0500 (Eastern Standard Time)
+[debug] [2018-01-24T22:48:26.413Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:5000
+

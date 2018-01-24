@@ -1,0 +1,51 @@
+*{
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
+html,body{
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+  background:#aaa;
+}
+
+.material-icons{
+  cursor:pointer;
+}
+
+.close{
+  position:absolute;
+  top:0;
+  right:0;
+  margin:.5rem;
+}
+
+#sidenav-overlay{
+  z-index:996;
+}
+
+.nav-wrapper{
+  background:#fff;
+}
+
+.nav-wrapper .material-icons{
+  padding:0 1rem;
+  margin:0 .5rem;
+  font-size:2rem !important;
+  color:#000;
+}
+
+textarea,.ace_editor{
+  width:100%;
+  height:99%;
+  position:absolute !important;
+  top:0;
+  left:0;
+  z-index:1;
+  display:block;
+  padding:66px 0 0 .5rem;
+  background:#fff;
+}
