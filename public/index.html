@@ -4,12 +4,22 @@
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width,user-scalable=no"/>
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+		<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 		<link rel="stylesheet" href="main.css"/>
 		<title>Notepad</title>
 	</head>
 	<body>
 		<a href="#" id="downloadLink"></a>
+		
+		<div class="modal" id="authContainer">
+			<div class="modal-content">
+				<h4>Sign In</h4>
+				<div id="firebaseui-auth-container"></div>
+			</div>
+		</div>
+		
+		
 
 		<div class="modal" id="fileExplorer">
 			<div class="modal-content">
@@ -66,6 +76,7 @@
 		  };
 		  firebase.initializeApp(config);
 		</script>
+		<script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-auth.js"></script>
 		<script
 		src="https://code.jquery.com/jquery-3.2.1.js"
