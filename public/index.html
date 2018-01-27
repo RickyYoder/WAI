@@ -12,14 +12,47 @@
 	<body>
 		<a href="#" id="downloadLink"></a>
 		
+		<div class="modal" id="alertModal">
+			<div class="modal-content">
+				<i class="material-icons close">close</i>
+				<div id="alertModalMessage"></div>
+			</div>
+		</div>
+		
 		<div class="modal" id="authContainer">
 			<div class="modal-content">
+				<i class="material-icons close">close</i>
 				<h4>Sign In</h4>
 				<div id="firebaseui-auth-container"></div>
 			</div>
 		</div>
 		
-		
+		<div class="modal" id="saveFileModal">
+			<div class="modal-content">
+				<i class="material-icons close">close</i>
+				<h4>Save File</h4>
+				<div class="container">
+					<div class="row">
+						<form class="col s12" name="saveForm" id="saveForm">
+							<div class="row">
+								<div class="input-field col s12">
+									<label for="filename">Filename</label>
+									<input type="text" name="filename" placeholder="myfile" />
+								</div>
+							</div>
+							<div class="row">
+								<div class="input-field col s12">
+									<button type="submit" class="btn black white-text waves waves-effect waves-light">Save</button>
+								</div>
+							</div>
+						<form>
+					</div>
+					<div class="row">
+						<span id="saveStatus"></span>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<div class="modal" id="fileExplorer">
 			<div class="modal-content">
