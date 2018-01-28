@@ -3,7 +3,6 @@ var storage = firebase.storage(),
 	userDirRef = '';
 	user = firebase.auth().currentUser,
 	currentFileName = '',
-	actions = [],
 	ui = new firebaseui.auth.AuthUI(firebase.auth()),
 	uiConfig = {
 		callbacks: {
@@ -60,6 +59,15 @@ firebase.auth().onAuthStateChanged(function(u) {
 $('.modal').modal();
 $('.button-collapse').sideNav();
 
+$("#saveForm").submit(function(e){
+	e.preventDefault();
+	e.stopPropagation();
+	
+	currentFileName = this.filename.value;
+	
+	$('.modal').modal('close');
+});
+
 $('.fileExplorerTrigger').click(function(){
   $('#fileExplorer').modal('open');
 });
@@ -69,7 +77,9 @@ $(".downloadTrigger").click(function(){
   
   var url = URL.createObjectURL(blob);
   
-  $("#downloadLink").attr("href",url).attr("download","myFile.txt").click();
+  var downloadName = currentFileName || "Untitled";
+  
+  $("#downloadLink").attr("href",url).attr("download",downloadName+".txt").click();
   
   document.getElementById('downloadLink').click();
 });
