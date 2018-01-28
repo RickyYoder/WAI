@@ -1,4 +1,7 @@
-var user = firebase.auth().currentUser,
+var storage = firebase.storage(),
+	storageRef = storage.ref(),
+	userDirRef = '';
+	user = firebase.auth().currentUser,
 	currentFileName = '',
 	actions = [],
 	ui = new firebaseui.auth.AuthUI(firebase.auth()),
@@ -8,6 +11,8 @@ var user = firebase.auth().currentUser,
 				// User successfully signed in.
 				// Return type determines whether we continue the redirect automatically
 				// or whether we leave that to developer to handle.
+				
+				initUserDir();
 				return false;
 			},
 			uiShown: function() {
@@ -27,6 +32,10 @@ var user = firebase.auth().currentUser,
 		tosUrl:''
 	};
 
+	
+function initUserDir(){
+	userDirRef = storageRef.child(user.uid);
+}
 
 firebase.auth().setPersistence(firebase.auth.Auth.Persistence.LOCAL)
 .then(function() {
@@ -42,6 +51,7 @@ firebase.auth().onAuthStateChanged(function(u) {
   if (u) {
     // User is signed in.
 	user = u;
+	initUserDir();
   } else {
     // No user is signed in.
   }
